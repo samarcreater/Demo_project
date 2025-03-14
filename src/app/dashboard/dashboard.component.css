@@ -1,0 +1,31 @@
+/* Main Dashboard Container */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between sections */
+    padding: 20px;
+    max-width: 100%;
+    overflow: hidden; /* Prevents unwanted scrolling */
+}
+
+/* Top Stats Section */
+app-top-stats {
+    width: 100%;
+}
+
+/* Charts Section */
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Recent Activities */
+app-recent-activities {
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

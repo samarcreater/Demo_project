@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+.success-snackbar {
+    background-color: #4CAF50 !important; /* Green */
+    color: white !important;
+  }
+  
+  .error-snackbar {
+    background-color: #f44336 !important; /* Red */
+    color: white !important;
+  }
+  
+  .warning-snackbar {
+    background-color: #ff9800 !important; /* Orange */
+    color: black !important;
+  }
+  
+  /* Style action buttons */
+  .mat-mdc-snack-bar-container .mdc-button {
+    color: rgb(8, 42, 127) !important; /* Button color */
+    font-weight: bold;
+  }
+  
+  .mat-mdc-snack-bar-container .mdc-button:hover {
+    color: rgba(8, 6, 74, 0.021) !important;
+    background-color: none !important;
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

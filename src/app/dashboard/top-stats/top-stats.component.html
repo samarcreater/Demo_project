@@ -1,0 +1,17 @@
+<div class="top-stats">
+    <div class="stat-box" *ngFor="let stat of stats" [style.background]="stat.bgColor">
+        <div class="stat-info">
+            <h3>{{ stat.title }}</h3>
+            <p>{{ stat.value }}</p>
+        </div>
+        <div class="chart-container">
+            <div class="chart-container1">
+                <apx-chart
+                    [series]="stat.chartSeries"
+                    [chart]="stat.chartOptions">
+                </apx-chart>
+            </div>
+        </div>
+        
+    </div>
+</div>

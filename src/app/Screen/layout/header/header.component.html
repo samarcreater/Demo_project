@@ -1,0 +1,68 @@
+<nav>
+    <h1>Dummy</h1>
+
+    <div class="menu-container">
+
+        <div class="hamburger" [class.open]="menuOpen" (click)="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+
+        <ul [class.open]="menuOpen">
+            <li><a routerLink="home" (click)="toggleMenu()">Home</a></li>
+            <li><a routerLink="about" (click)="toggleMenu()">About</a></li>
+            <li><a routerLink="contact" (click)="toggleMenu()">Contact</a></li>
+            <li><a routerLink="buttons" (click)="toggleMenu()">Button</a></li>
+            <li class="logout-btn1">
+                <button (click)="logout($event)" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </li>
+        </ul>
+
+
+
+    </div>
+
+
+
+    <div class="profile-container" (click)="toggleDropdown()">
+        <span class="user-name">{{ getUserFirstnameInitials() }}</span>
+        <div class="profile-initials">{{ getUserInitials() }}</div>
+
+
+        <div class="dropdown-menu11" *ngIf="dropdownOpen">
+            <div class="profile-header">
+                <div class="profile-avatar">{{ getUserInitials() }}</div>
+                <div>
+                    <p class="user-full-name">{{ user?.name }}</p>
+                    <p class="user-email">{{ user?.email }}</p>
+                </div>
+            </div>
+            <hr />
+            <ul>
+                <li>
+                    <a routerLink="/profile" title="View Profile">
+                        <i class="fas fa-user"></i> View Profile
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/settings" title="Settings">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/help" title="Help & Support">
+                        <i class="fas fa-question-circle"></i> Help & Support
+                    </a>
+                </li>
+            </ul>
+            <hr />
+            <button (click)="logout($event)" title="Logout">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </div>
+</nav>

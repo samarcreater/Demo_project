@@ -1,0 +1,16 @@
+<button [attr.type]="buttonType" class="btn 
+         {{ outline ? 'btn-outline-' + variant : 'btn-' + variant }} 
+         {{ size === 'md' ? '' : 'btn-' + size }} 
+        " [class.w-100]="fullWidth" [disabled]="disabled || loading" [attr.title]="title">
+
+
+    <i *ngIf="icon && iconPosition === 'left'" class="bi bi-{{ icon }}"></i>
+
+
+    <span *ngIf="loading" class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+
+
+    <ng-content></ng-content>
+
+    <i *ngIf="icon && iconPosition === 'right'" class="bi bi-{{ icon }}"></i>
+</button>

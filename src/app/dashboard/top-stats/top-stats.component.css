@@ -1,0 +1,70 @@
+.top-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Forces 4 stats in one row */
+    gap: 16px; /* Space between stat boxes */
+    padding: 16px;
+    max-width: 100%;
+}
+
+/* Each stat box takes equal space */
+.stat-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto; /* Auto height */
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    min-width: 200px; /* Prevents extreme shrinking */
+}
+
+/* Left section for title and value */
+.stat-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-right: 10px; /* Space between text and chart */
+}
+
+.stat-info h3 {
+    margin: 0;
+    font-size: clamp(14px, 1.2vw, 18px); /* Auto-adjust text size */
+}
+
+.stat-info p {
+    margin: 2px 0;
+    font-size: clamp(18px, 1.5vw, 24px); /* Scales dynamically */
+    font-weight: bold;
+}
+
+/* Right section for chart */
+.chart-container {
+    width: clamp(80px, 6vw, 120px); /* Dynamically adjusts */
+    height: clamp(40px, 4vw, 70px); /* Adjusts height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevents the chart from shrinking */
+}
+
+.chart-container1{
+
+    width:100px;
+}
+
+/* ✅ Responsive Fix: Ensures it stays in one row on medium screens */
+@media (max-width: 1024px) {
+    .top-stats {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .top-stats {
+        grid-template-columns: repeat(1, 1fr); /* Stack on small screens */
+    }
+}
