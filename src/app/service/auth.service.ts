@@ -8,7 +8,7 @@ import { Observable,BehaviorSubject  } from 'rxjs';
 export class AuthService {
   private userSubject = new BehaviorSubject<any>(null);
   user$ = this.userSubject.asObservable();
-  private apiUrl = 'http://localhost:3010/api/users'; // Replace with your backend URL
+  private apiUrl = 'https://nodebackend-3zd0.onrender.com/api/users'; // Replace with your backend URL
 
   constructor(private http: HttpClient) {
     const user = localStorage.getItem('user');
