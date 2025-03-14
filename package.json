@@ -3,9 +3,10 @@
   "version": "0.0.0",
 "scripts": {
   "ng": "ng",
-  "start": "\"npm run start:frontend\"", 
-  "start:frontend": "ng serve",
-  "build": "ng build",
+  "start": "ng serve",
+  "start:frontend": "ng serve --host 0.0.0.0 --port 10000",
+  "build": "ng build --configuration production",
+  "postinstall": "npm run build",
   "watch": "ng build --watch --configuration development",
   "test": "ng test"
 },
